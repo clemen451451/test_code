@@ -3,7 +3,7 @@
 
 void PrintNumbersInConsole(int MaxNumber, bool IsOdd);
 
-int MaxNumber = 9;
+const int MaxNumber = 9;
 
 int main()
 {
