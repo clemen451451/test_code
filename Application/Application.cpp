@@ -9,12 +9,15 @@ private:
 	int y;
 
 public:
-	Vector() : x(5), y(4)
+	Vector() : x(0), y(0)
 	{}
 
-	int GetVectorSize()
+	Vector(int _x, int _y) : x(_x), y(_y)
+	{}
+
+	double GetVectorSize()
 	{
-		return (x * x) + (y * y);
+		return sqrt((x * x) + (y * y));
 	}
 
 	void ShowVectorValues()
@@ -25,9 +28,9 @@ public:
 
 int main()
 {
-	Vector vector;
+	Vector vector(3, 5);
 
 	vector.ShowVectorValues();
 
-	std::cout << "\n" << "Size: " << sqrt(vector.GetVectorSize());
+	std::cout << "\n" << "Size: " << vector.GetVectorSize();
 }
